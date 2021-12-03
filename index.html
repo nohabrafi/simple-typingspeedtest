@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="logic.js"></script>
+    <style>
+        body {
+            background-color: aquamarine;
+        }
+
+        #txtArea {
+            margin: 0;
+            position: absolute;
+            top: 280px;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+
+        #buttonDiv {
+            margin: 0;
+            position: absolute;
+            top: 200px;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+
+        #timer {
+            text-align: center;
+            font-size: xx-large;
+        }
+
+        #outputArea {
+            text-align: center;
+            font-size: xx-large;
+            margin-top: 50px;
+        }
+
+        #counterDiv {
+            text-align: center;
+            font-size: xx-large;
+            margin-top: 300px;
+        }
+
+        #resultDiv {
+            text-align: center;
+            font-size: xx-large;
+            margin-top: 31 0px;
+        }
+
+        #txtArea {
+            font-size: xx-large;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div>
+            <p id="timer">00:00</p>
+        </div>
+
+        <div>
+            <p id="outputArea"></p>
+        </div>
+
+        <div id="txtDiv">
+            <textarea name="txtArea" id="txtArea" cols="30" rows="2" oninput="txtChecker()" onclick="startGame()"></textarea>
+        </div>
+
+        <div id="buttonDiv">
+            <label for="buttonDiv">Toggle between modes (full text vs random words): </label>
+            <button id="modeChanger" onclick="changeGamemode()">Mode Changer</button>
+            <label id="gameMode" for="buttonDiv">default mode: sentence</label>
+        </div>
+
+        <div id="counterDiv">
+            <label for="counter">Keys pressed: </label>
+            <p id="counterArea"></p>
+        </div>
+
+        <div id="resultDiv">
+            <p id="result"></p>
+        </div>
+
+
+
+    </div>
+
+
+</body>
+
+</html>
